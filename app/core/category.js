@@ -7,12 +7,8 @@ function handler (pages, slug) {
   let is_exact = false;
   let currentPage = null;
 
-  console.log('slug before', slug);
-
   // remove trailing slashes (match both for Windows and Unix)
   slug = path.normalize(slug).replace(/^\\|^\/|\/$|\\$/g, '');
-
-  console.log('slug after', slug);
 
   while (i--) {
     const page = pages[i];
@@ -29,8 +25,6 @@ function handler (pages, slug) {
   if (currentPage && currentPage.files && !is_exact) {
     return handler(currentPage.files, slug);
   }
-
-  console.log('currentPage', currentPage);
 
   return currentPage;
 }
