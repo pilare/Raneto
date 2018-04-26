@@ -281,7 +281,7 @@ describe('#getCategoryPage()', () => {
 
     console.log('result', result);
 
-    expect(result).to.have.property('slug', 'sub\\sub2');
+    expect(result).to.have.property('slug', path.normalize('sub/sub2'));
     expect(result).to.have.property('title', 'Sub2');
     expect(result).to.have.property('is_directory', true);
     expect(result).to.have.property('files');

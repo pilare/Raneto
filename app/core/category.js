@@ -9,7 +9,8 @@ function handler (pages, slug) {
 
   console.log('slug before', slug);
 
-  slug = path.normalize(slug).replace(/^\/|\/$/g, '');
+  // remove trailing slashes (match both for Windows and Unix)
+  slug = path.normalize(slug).replace(/^\\|^\/|\/$|\\$/g, '');
 
   console.log('slug after', slug);
 
