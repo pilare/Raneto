@@ -9,7 +9,7 @@ function handler (pages, slug) {
 
   console.log('slug before', slug);
 
-  slug = path.normalize(slug).replace(/^\\|\\$/g, '');
+  slug = path.normalize(slug).replace(/^\/|\/$/g, '');
 
   console.log('slug after', slug);
 
