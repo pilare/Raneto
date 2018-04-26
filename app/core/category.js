@@ -9,6 +9,8 @@ function handler (pages, slug) {
 
   slug = path.normalize(slug).replace(/^\\|\\$/g, '');
 
+  console.log('slug', slug);
+
   while (i--) {
     const page = pages[i];
     const _slug = path.normalize(page.slug);
