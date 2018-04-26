@@ -7,10 +7,11 @@ function handler (pages, slug) {
   let is_exact = false;
   let currentPage = null;
 
+  console.log('slug before', slug);
+
   slug = path.normalize(slug).replace(/^\\|\\$/g, '');
 
-  console.log('pages.length', pages.length);
-  console.log('slug', slug);
+  console.log('slug after', slug);
 
   while (i--) {
     const page = pages[i];
