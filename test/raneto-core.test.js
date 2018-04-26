@@ -278,6 +278,9 @@ describe('#getCategoryPage()', () => {
     var pageList = contentsHandler(slug, config);
     var pages = build_nested_pages(pageList);
     var result = categoryHandler(pages, slug);
+
+    console.log('result', result);
+
     expect(result).to.have.property('slug', 'sub\\sub2');
     expect(result).to.have.property('title', 'Sub2');
     expect(result).to.have.property('is_directory', true);
