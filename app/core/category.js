@@ -25,6 +25,8 @@ function handler (pages, slug) {
     return handler(currentPage.files, slug);
   }
 
+  console.log('currentPage', currentPage);
+
   return currentPage;
 }
 
